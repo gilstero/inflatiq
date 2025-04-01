@@ -22,5 +22,72 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+
+.logo {
+  position: absolute;
+  top: 0rem; 
+  right: 1rem; 
+  width: 10rem; 
+  height: 10rem; 
+}
+
+@layer utilities {
+  .bg-neon-blue {
+    background-color: #15a8bc; /* Neon Blue color */
+  }
+  .hover\:bg-neon-blue-dark:hover {
+    background-color: #0d5b65; /* Darker shade of Neon Blue */
+  }
+
+  .shadow-neon-blue {
+    box-shadow: 0 4px 20px #15a8bc; /* Custom neon blue shadow */
+  }
+
+  .hover\:shadow-neon-blue:hover {
+    box-shadow: 1px 6px 15px #0d5b65; /* Stronger shadow on hover */
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 0.8; }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1s ease-in;
+}
+
+.titlebox {
+  text-align: center;
+  margin-bottom: 100px;
+  margin-top: 200px;
+}
+
+.filler {
+  height: 25px;
+}
+
+.links {
+  text-align: left;
+}
+
+.signupbox {
+  width: 375px;
+  height: 500px;
+  border: 15px solid #15a8bc;
+  padding: 50px;
+  margin: 20px;
+  border-radius: 20px;
+}
+
+.loginbox {
+  width: 375px;
+  height: 500px;
+  border: 15px solid #15a8bc;
+  padding: 50px;
+  margin: 20px;
+  border-radius: 20px;
 }

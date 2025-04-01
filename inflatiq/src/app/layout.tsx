@@ -26,11 +26,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
+      <head>
+        <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/gilroy-bold"/>
+      </head>
+      <body className="font-gilroy antialiased">{children}</body>
     </html>
   );
 }
