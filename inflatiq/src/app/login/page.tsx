@@ -8,52 +8,64 @@ export default function Login() {
 
 
     return (
-        <div className="flex flex-col justify-center items-center font-sans min-h-screen">
-            <img
-                src="/inflatiqdark.png"
-                alt="Company Logo"
-                className="logo mb-4"
-            />
-            <title>Welcome.</title>
-            <div className="loginbox flex flex-col items-center justify-center shadow-neon-blue p-6 rounded-lg w-80">
-                <p className="text-3xl mb-10">
-                    Welcome
-                </p>
-                <label htmlFor="email" className="sr-only">
-                </label>
+        <div className="flex flex-col justify-center items-center font-sans min-h-screen bg-gradient">
+          <img
+            src="/inflatiqdark.png"
+            alt="InflatiQ"
+            className="logo animate-fadeIn"
+          />
+          
+          <div className="glass-effect rounded-2xl overflow-hidden animate-fadeIn shadow-neon-blue p-8 w-96 transition-all duration-300">
+            <h1 className="text-3xl font-medium text-white text-center mb-8">Welcome Back</h1>
+            
+            <div className="space-y-5">
+              <div>
                 <input
-                    type="text"
-                    id="email"
-                    name="email"
-                    placeholder="Enter Email"
-                    required
-                    className="input-field mb-3 p-2 border border-gray-300 rounded"
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Email address"
+                  required
+                  className="w-full bg-black/30 text-white px-4 py-3 rounded-lg border border-gray-700 input-focus-effect transition-all duration-300"
                 />
-
-                <label htmlFor="psw" className="self-start mb-1 font-bold">
-                </label>
+              </div>
+              
+              <div>
                 <input
-                    type="password"
-                    id="psw"
-                    name="psw"
-                    placeholder="Enter Password"
-                    required
-                    className="input-field mb-3 p-2 border border-gray-300 rounded"
+                  type="password"
+                  id="psw"
+                  name="psw"
+                  placeholder="Password"
+                  required
+                  className="w-full bg-black/30 text-white px-4 py-3 rounded-lg border border-gray-700 input-focus-effect transition-all duration-300"
                 />
-                <button className="w-55 py-4 px-6 mt-10 rounded-full bg-neon-blue text-white font-medium hover:bg-neon-blue-dark transition duration-300 shadow-neon-blue hover:shadow-neon-blue"
-                onClick={() => router.push('/signup')}>
-                Login
-                </button>
-                <a className="mt-4" onClick={() => router.push('/signup')}>
-                    Make an account?
+              </div>
+              
+              <div className="flex justify-end">
+                <a href="/forgot-password" className="text-sm text-gray-400 hover:text-neon-blue transition-colors">
+                  Forgot password?
                 </a>
+              </div>
+              
+              <button 
+                className="w-full py-3 mt-6 rounded-lg bg-neon-blue text-white font-medium hover:bg-neon-blue-dark transition-all duration-300 shadow-neon-blue hover:shadow-neon-blue transform hover:-translate-y-1"
+                onClick={() => router.push('/dashboard')}
+              >
+                Sign In
+              </button>
+              
+              <p className="text-gray-400 text-center text-sm mt-6">
+                Don't have an account? <a href="/signup" className="text-neon-blue hover:underline" onClick={(e) => {e.preventDefault(); router.push('/signup')}}>Create one</a>
+              </p>
             </div>
-            <div className="justify-center">
-            <a href="/" className="mt-6 underline mr-2" >home</a>
-            <a href="/" className="mt-6 underline ml-2 mr-2">API</a>
-            <a href="/" className="mt-6 underline ml-2 mr-2">privacy policy</a>
-            <a href="/" className="mt-6 underline ml-2 ">our goals</a>
-            </div>
+          </div>
+          
+          <div className="footer-links mt-12 mb-6">
+            <a href="/">Home</a>
+            <a href="/api">API</a>
+            <a href="/privacy">Privacy</a>
+            <a href="/goals">Our Vision</a>
+          </div>
         </div>
     );
 }

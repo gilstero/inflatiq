@@ -18,102 +18,86 @@ body {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
-
 .logo {
   position: absolute;
-  top: 0rem; 
-  right: 1rem; 
-  width: 10rem; 
-  height: 10rem; 
+  top: 1.5rem; 
+  right: 1.5rem; 
+  width: 8rem; 
+  height: auto;
+  filter: drop-shadow(0 0 10px rgba(21, 168, 188, 0.3));
 }
 
 @layer utilities {
   .bg-neon-blue {
-    background-color: #15a8bc; /* Neon Blue color */
+    background-color: #15a8bc;
   }
   .hover\:bg-neon-blue-dark:hover {
-    background-color: #0d5b65; /* Darker shade of Neon Blue */
+    background-color: #0d5b65;
   }
 
   .shadow-neon-blue {
-    box-shadow: 0 4px 20px #15a8bc; /* Custom neon blue shadow */
+    box-shadow: 0 0 20px rgba(21, 168, 188, 0.2);
   }
 
   .hover\:shadow-neon-blue:hover {
-    box-shadow: 1px 6px 15px #0d5b65; /* Stronger shadow on hover */
+    box-shadow: 0 0 25px rgba(21, 168, 188, 0.4);
+  }
+  
+  .bg-gradient {
+    background: linear-gradient(135deg, #000000 0%, #121212 100%);
   }
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 0.8; }
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .animate-fadeIn {
-  animation: fadeIn 1s ease-in;
+  animation: fadeIn 0.6s ease-out forwards;
 }
 
-.titlebox {
-  text-align: center;
-  margin-bottom: 100px;
-  margin-top: 200px;
+.glass-effect {
+  background: rgba(21, 21, 21, 0.7);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.filler {
-  height: 25px;
+.input-focus-effect:focus {
+  border-color: #15a8bc;
+  box-shadow: 0 0 0 2px rgba(21, 168, 188, 0.2);
+  outline: none;
 }
 
-.links {
-  text-align: left;
-}
-
-.signupbox {
-  width: 375px;
-  height: 500px;
-  border: 15px solid #15a8bc;
-  padding: 50px;
-  margin: 20px;
-  border-radius: 20px;
-}
-
-.loginbox {
-  width: 375px;
-  height: 500px;
-  border: 15px solid #15a8bc;
-  padding: 50px;
-  margin: 20px;
-  border-radius: 20px;
-}
-
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-  background-color: #111; /* Adjust based on your design */
-  padding: 10px 0;
-}
-
-.hyperlinks {
+.footer-links {
   display: flex;
-  justify-content: center; 
-  gap: 20px;
+  justify-content: center;
+  gap: 2rem;
 }
 
-.hyperlinks a {
-  text-decoration: none; 
-  color: #ffffff;
-  font-weight: 500; 
-  transition: color 0.3s ease-in-out; 
+.footer-links a {
+  color: rgba(255, 255, 255, 0.7);
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  position: relative;
 }
 
-.hyperlinks a:hover {
-  color: #00bcd4;
-  text-decoration: underline; 
+.footer-links a:hover {
+  color: #15a8bc;
 }
 
-.navbar {
-  height: 100px;
-  background-color:#000000;
+.footer-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  background-color: #15a8bc;
+  transition: width 0.3s ease;
+}
+
+.footer-links a:hover::after {
   width: 100%;
 }
