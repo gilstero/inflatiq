@@ -89,7 +89,6 @@ body {
 
 .footer-links a::after {
   content: '';
-  position: absolute;
   width: 0;
   height: 1px;
   bottom: -2px;

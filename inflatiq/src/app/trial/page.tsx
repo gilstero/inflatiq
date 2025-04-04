@@ -4,9 +4,6 @@ import { useRouter } from 'next/navigation';
 
 export default function Trial() {
 
-    
-
-
     return (
         <div className="flex flex-col justify-center items-center font-sans">
             <div className="flex justify-end items-center space-x-4 w-full navbar">
@@ -19,7 +16,7 @@ export default function Trial() {
                 <button> </button>
             </div>
             <div>
-
+            
             </div>
         </div>
     );
