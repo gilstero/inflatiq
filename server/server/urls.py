@@ -20,6 +20,14 @@ from members.views import *
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("api/private/userpage", userview.as_view(), name="userviewer"),
-    
+
+    # api view for the users in the database
+    path("api/auth/userpage/", userview.as_view(), name="userviewer"),
+
+    # api view for loging in
+    path("api/pub/login/", login.as_view(), name="login"),
+
+    # api vuew for registering
+    path("api/pub/register/", register.as_view(), name="register"),
+
 ]
