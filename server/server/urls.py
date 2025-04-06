@@ -16,7 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from members.views import *
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path("api/private/userpage", userview.as_view(), name="userviewer"),
+    
 ]
