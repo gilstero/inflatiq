@@ -5,7 +5,6 @@ from django.utils import timezone
 class UserSerializer(serializers.Serializer):
     pass
 
-
 class RegisterSerializer(serializers.Serializer):
     email = serializers.EmailField()
     password = serializers.CharField(max_length=30, write_only=True)
