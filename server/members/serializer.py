@@ -35,3 +35,15 @@ class RegisterSerializer(serializers.Serializer):
             'profilename': instance.profilename,
             'creation': instance.creation
         }
+    
+class LoginSerializer(serializers.Serializer):
+    email = serializers.EmailField()
+    password = serializers.CharField(max_length=30, write_only=True)
+
+    def to_representation(self, instance):
+        return {
+            'message': 'Logged In',
+            'id': instance.id,
+            'email': instance.email,
+        }
+
