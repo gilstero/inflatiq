@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.logo {
+  position: absolute;
+  top: 1.5rem; 
+  right: 1.5rem; 
+  width: 8rem; 
+  height: auto;
+  filter: drop-shadow(0 0 10px rgba(21, 168, 188, 0.3));
+}
+
+@layer utilities {
+  .bg-neon-blue {
+    background-color: #15a8bc;
+  }
+  .hover\:bg-neon-blue-dark:hover {
+    background-color: #0d5b65;
+  }
+
+  .shadow-neon-blue {
+    box-shadow: 0 0 20px rgba(21, 168, 188, 0.2);
+  }
+
+  .hover\:shadow-neon-blue:hover {
+    box-shadow: 0 0 25px rgba(21, 168, 188, 0.4);
+  }
+  
+  .bg-gradient {
+    background: linear-gradient(135deg, #000000 0%, #121212 100%);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.glass-effect {
+  background: rgba(21, 21, 21, 0.7);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.input-focus-effect:focus {
+  border-color: #15a8bc;
+  box-shadow: 0 0 0 2px rgba(21, 168, 188, 0.2);
+  outline: none;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.7);
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  position: relative;
+}
+
+.footer-links a:hover {
+  color: #15a8bc;
+}
+
+.footer-links a::after {
+  content: '';
+  width: 0;
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  background-color: #15a8bc;
+  transition: width 0.3s ease;
+}
+
+.footer-links a:hover::after {
+  width: 100%;
+}
