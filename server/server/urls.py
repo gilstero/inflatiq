@@ -16,7 +16,24 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+<<<<<<< HEAD
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+=======
+from members.views import *
+
+urlpatterns = [
+    path("admin/", admin.site.urls),
+
+    # api view for the users in the database
+    path("api/auth/userpage/", userview.as_view(), name="userviewer"),
+
+    # api view for loging in
+    path("api/pub/login/", login.as_view(), name="login"),
+
+    # api vuew for registering
+    path("api/pub/register/", register.as_view(), name="register"),
+
+>>>>>>> c3b8db3a34e5944027bc9ee53aee25f9b2da2a51
 ]

@@ -186,7 +186,11 @@ export default function Home() {
         <div className="background-glow"></div>
         
         <img
+<<<<<<< HEAD
           src="/inflatiqdark.png"
+=======
+          src="../inflatiqdark.png"
+>>>>>>> c3b8db3a34e5944027bc9ee53aee25f9b2da2a51
           alt="InflatiQ"
           className="logo"
         />

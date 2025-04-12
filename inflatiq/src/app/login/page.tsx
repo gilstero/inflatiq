@@ -10,7 +10,11 @@ export default function Login() {
     return (
         <div className="flex flex-col justify-center items-center font-sans min-h-screen bg-gradient">
           <img
+<<<<<<< HEAD
             src="/inflatiqdark.png"
+=======
+            src="../inflatiqdark.png"
+>>>>>>> c3b8db3a34e5944027bc9ee53aee25f9b2da2a51
             alt="InflatiQ"
             className="logo animate-fadeIn"
           />

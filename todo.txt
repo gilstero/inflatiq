@@ -1,0 +1,14 @@
+1. website fixing
+1.1. small front end improvements
+1.2. elements should fix in screen correct
+
+2. build out authentification
+3. establish mission of company
+4. set up user and admin page
+5. secure data
+6. build out trial version
+7. build out paid version
+8. add AI recs
+9. add notifications
+10. build server
+11. deploy

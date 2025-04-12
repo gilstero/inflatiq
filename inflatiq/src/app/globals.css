@@ -89,7 +89,10 @@ body {
 
 .footer-links a::after {
   content: '';
+<<<<<<< HEAD
   position: absolute;
+=======
+>>>>>>> c3b8db3a34e5944027bc9ee53aee25f9b2da2a51
   width: 0;
   height: 1px;
   bottom: -2px;
